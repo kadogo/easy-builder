@@ -32,15 +32,19 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 
 ### MangoHud
 
+* Tested on Debian Buster
+
 * Image: Debian Buster is needed for the build to work
 * It build an appimage and give the libraries in the mangohud directory
 
-* You need to specify`MANGOHUDARCH` as `x86-64` or `x86`
-* This environnement variable is needed because the AppImage load the right architecture library based on it.
+* The Appimage no need anymore that we specify the architecutre
+* The Appimage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate MangoHud vulkan layer
 
 * Tested on Debian Buster
 
 ### Yad
+
+* Tested on Debian Buster
 
 * Image: Debian Stretch
 * It build an AppImage
