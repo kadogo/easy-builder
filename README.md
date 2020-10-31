@@ -40,13 +40,9 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 * The Appimage no need anymore that we specify the architecutre
 * The Appimage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate MangoHud vulkan layer
 
-* Tested on Debian Buster
-
 ### Yad
 
 * Tested on Debian Buster
 
 * Image: Debian Stretch
 * It build an AppImage
-
-* Tested on Debian Buster
