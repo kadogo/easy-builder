@@ -38,7 +38,11 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 * You need to specify`MANGOHUDARCH` as `x86-64` or `x86`
 * This environnement variable is needed because the AppImage load the right architecture library based on it.
 
+* Tested on Debian Buster
+
 ### Yad
 
 * Image: Debian Stretch
 * It build an AppImage
+
+* Tested on Debian Buster
