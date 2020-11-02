@@ -110,8 +110,8 @@ mv ./*.AppImage /target/
 # Move also the lib for people that not want the MangoHud wrapper
 mv ./AppDir/usr/lib/mangohud/ /target/
 
-# Move also the vulkan implicit layer
-mv ./AppDir/usr/share/vulkan/ /target/mangohud/
+# Copy also the vulkan implicit layer
+cp -a ./AppDir/usr/share/vulkan/ /target/mangohud/
 
 # Execute the CMD command by default in Dockerfile or what we pass as argument
 exec "$@"
