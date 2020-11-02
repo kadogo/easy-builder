@@ -35,10 +35,21 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 * Tested on Debian Buster
 
 * Image: Debian Buster is needed for the build to work
-* It build an appimage and give the libraries in the mangohud directory
+* It build an AppImage and give the libraries in the mangohud directory
 
-* The Appimage no need anymore that we specify the architecture
-* The Appimage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate MangoHud vulkan layer
+* The AppImage no need anymore that we specify the architecture
+* The AppImage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate MangoHud vulkan layer
+
+### VkBasalt
+
+* Tested on Debian Buster
+
+* Image: Debian Bullseye is needed because it must be build with at least GCC 9
+* It build an AppImage and give the libraries in the vkbasalt directory
+
+* Because the build of GCC 9 the lib libstdc++ is build staticaly without that there will be an GLIBCXX error
+* The AppImage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate VkBasalt vulkan layer
+* You can use `VKBASALT_CONFIG_FILE` to define the vkbasalt.conf
 
 ### Yad
 
