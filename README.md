@@ -26,7 +26,7 @@ docker build ./<APP>/ -t <IMAGE>
 # Replace <DIRECTORY> by the destination (the full path form not the relative) where you want to find the result of the build
 docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 ```
-4) You can exit your docker container with CTRL+D you will find the build result in <DIRECTORY>
+4) You can exit your docker container with CTRL+D you will find the build result in `<DIRECTORY>`
 
 ## Application description
 
@@ -37,7 +37,7 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 * Image: Debian Buster is needed for the build to work
 * It build an appimage and give the libraries in the mangohud directory
 
-* The Appimage no need anymore that we specify the architecutre
+* The Appimage no need anymore that we specify the architecture
 * The Appimage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate MangoHud vulkan layer
 
 ### Yad
