@@ -30,7 +30,7 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 
 ## Application description
 
-* [GOverlay](./goverlay/README.md)
+* [GOverlay](./goverlay/)
 
 ### MangoHud
 
