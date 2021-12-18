@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Extract linuxdeploy se we not use fuse for building
-/linuxdeploy.AppImage --appimage-extract
+./linuxdeploy.AppImage --appimage-extract
 
 # Go to git
 cd ./git
@@ -20,12 +20,10 @@ StartupNotify=true
 EOF
 
 # Build appimage with linuxdeploy
-/squashfs-root/AppRun \
+../squashfs-root/AppRun \
   --appdir ./AppDir \
   -i ./data/icons/128x128/yad.png \
-  --executable ./AppDir/bin/pfd \
   --executable ./AppDir/bin/yad \
-  --executable ./AppDir/bin/yad-icon-browser \
   -d ./yad.desktop \
   --output appimage
 
