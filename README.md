@@ -1,7 +1,11 @@
 # easy-builder
-Build multiple application with or without appimage with the help of docker
+Build multiple application with or without AppImage thanks to docker
 
-## Howto use easy-builder
+## Notice
+
+The AppImage doesn't contain system libraries, it can happen you see something like `symbol lookup error: ***: undefined symbol: g_module_open_full`. If that happen, you can make an issue or PR, but the easiest will be that you build the AppImage on your system (with or without Docker).
+
+## How to use easy-builder
 
 0) Install git and docker for your distribution
 
@@ -20,7 +24,7 @@ cd ./easy-builder
 docker build ./<APP>/ -t <IMAGE>
 ```
 
-3) Use your image to build your application the result of the build will be in your defined directory
+3) Use your image to build your application, the result of the build will be in your defined directory
 
 ```
 # Replace <DIRECTORY> by the destination (the full path form not the relative) where you want to find the result of the build
@@ -40,17 +44,17 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 * It build an AppImage and give the libraries in the mangohud directory
 
 * The AppImage no need anymore that we specify the architecture
-* The AppImage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate MangoHud vulkan layer
+* The AppImage use internally `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate MangoHud vulkan layer
 
 ### VkBasalt
 
 * Tested on Debian Buster
 
-* Image: Debian Bullseye is needed because it must be build with at least GCC 9
+* Image: Debian Bullseye is needed because it must be built with at least GCC 9
 * It build an AppImage and give the libraries in the vkbasalt directory
 
-* Because the build of GCC 9 the lib libstdc++ is build staticaly without that there will be an GLIBCXX error
-* The AppImage use internaly `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate VkBasalt vulkan layer
+* Because the build of GCC 9 the lib libstdc++ is built statically without that there will be an GLIBCXX error
+* The AppImage use internally `VK_LAYER_PATH` and `VK_INSTANCE_LAYERS` to activate VkBasalt vulkan layer
 * You can use `VKBASALT_CONFIG_FILE` to define the vkbasalt.conf
 
 ### Yad
