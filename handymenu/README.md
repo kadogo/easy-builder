@@ -10,7 +10,7 @@ The AppImage has patched path because they are hardcoded in the source
 
 ## Use
 
-Running the Appimage will make a $HOME/.handymenu folder.
+Running the Appimage will make a folder at `$HOME/.handymenu`.
 
 ##  Note
 
