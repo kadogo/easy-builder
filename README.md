@@ -35,6 +35,7 @@ docker run -it -v <DIRECTORY>/target:/target <IMAGE>
 ## Application description
 
 * [GOverlay](./goverlay/)
+* [Handymenu](./handymenu/)
 
 ### MangoHud
 
