@@ -28,13 +28,14 @@ docker build ./<APP>/ -t <IMAGE>
 
 ```
 # Replace <DIRECTORY> by the destination (the full path form not the relative) where you want to find the result of the build
-docker run -it -v <DIRECTORY>/target:/target <IMAGE>
+docker run -it -v <FULL PATH DIRECTORY>/target:/target <YOUR IMAGE NAME>
 ```
-4) You can exit your docker container with CTRL+D you will find the build result in `<DIRECTORY>`
+4) You can exit your docker container with CTRL+D you will find the build result in `<FULL PATH DIRECTORY>`
 
 ## Application description
 
 * [GOverlay](./goverlay/)
+* [Handymenu](./handymenu/)
 
 ### MangoHud
 
