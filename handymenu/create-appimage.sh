@@ -12,12 +12,21 @@ for i in $(dpkg -L handymenu); do
     mkdir -p ./AppDir/$(dirname "$i") && cp -a "$i" ./AppDir/"$i"
   fi
 done
-
-# Create venv
-python3 -m venv ./AppDir/env/
-source ./AppDir/env/bin/activate
-pip install pygobject
-pip install pyxdg
+for i in $(dpkg -L python3-gi); do
+  if ! test -d "$i" ; then
+    mkdir -p ./AppDir/$(dirname "$i") && cp -a "$i" ./AppDir/"$i"
+  fi
+done
+for i in $(dpkg -L python3-xdg); do
+  if ! test -d "$i" ; then
+    mkdir -p ./AppDir/$(dirname "$i") && cp -a "$i" ./AppDir/"$i"
+  fi
+done
+for i in $(dpkg -L python3-minimal); do
+  if ! test -d "$i" ; then
+    mkdir -p ./AppDir/$(dirname "$i") && cp -a "$i" ./AppDir/"$i"
+  fi
+done
 
 # Patch files that have /usr/ hardcoded and bypass shebang for hm-start.py
 sed -i \
@@ -35,7 +44,7 @@ cat <<'EOF' > ./AppDir/AppRun
 export HERE="$(dirname "$(readlink -f "${0}")")"
 
 # Update PATH
-export PATH="$HERE/env/bin/:$HERE/usr/bin/:$PATH"
+export PATH="$HERE/usr/bin/:$PATH"
 
 if [ -z "$(ps aux | grep 'hm-start.py' | grep -v 'grep')" ]; then
     cd "$HERE/usr/share/handymenu"

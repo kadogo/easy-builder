@@ -1,8 +1,8 @@
-# Handymenu
+# HandyMenu
 
 ## AppImage specification
 
-Tested: Debian Buster.
+Tested: Debian Buster and Ubuntu Jammy
 
 Image: Debian Buster
 
