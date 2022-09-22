@@ -10,4 +10,5 @@ apt install --force-yes --yes \
   python3-venv \
   python3-gi \
   python3-xdg \
-  xdg-utils
+  xdg-utils \
+  xfce4-appfinder
