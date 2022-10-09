@@ -27,6 +27,11 @@ for i in $(dpkg -L python3-minimal); do
     mkdir -p ./AppDir/$(dirname "$i") && cp -a "$i" ./AppDir/"$i"
   fi
 done
+for i in $(dpkg -L xfce4-appfinder); do
+  if ! test -d "$i" ; then
+    mkdir -p ./AppDir/$(dirname "$i") && cp -a "$i" ./AppDir/"$i"
+  fi
+done
 
 # Patch files that have /usr/ hardcoded and bypass shebang for hm-start.py
 sed -i \

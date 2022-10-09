@@ -34,6 +34,7 @@ docker run -it -v <FULL PATH DIRECTORY>/target:/target <YOUR IMAGE NAME>
 
 ## Application description
 
+* [Arculator](./arculator/)
 * [GOverlay](./goverlay/)
 * [HandyMenu](./handymenu/)
 
