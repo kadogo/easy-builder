@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 
 # Install basic applications
 RUN apt update

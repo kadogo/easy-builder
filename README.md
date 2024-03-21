@@ -61,7 +61,7 @@ docker run -it -v <FULL PATH DIRECTORY>/target:/target <YOUR IMAGE NAME>
 
 ### Yad
 
-* Tested on Debian Buster
+* Tested on Debian Bookworm
 
-* Image: Debian Stretch
+* Image: Debian Buster
 * It build an AppImage
