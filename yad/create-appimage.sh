@@ -5,8 +5,12 @@
 # 1 disable strpping
 export NO_STRIP=1
 
-# TARGET path
-declare -r TARGET="/target/"
+# TARGET path based on container variable
+if [[ "$container" = "docker" ]] ; then
+  declare -r TARGET="/target/"
+else
+  declare -r TARGET="target/"
+fi
 
 # Extract linuxdeploy se we not use fuse for building
 ./linuxdeploy.AppImage --appimage-extract
@@ -15,7 +19,7 @@ declare -r TARGET="/target/"
 cd ./git
 
 # Prepare files if needed (desktop, icon...)
-cat << EOF > ./yad.desktop 
+cat << EOF > ./yad.desktop
 [Desktop Entry]
 Encoding=UTF-8
 Name=Yad
